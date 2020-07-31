@@ -26,6 +26,7 @@ class LaravelInstallerServiceProvider extends ServiceProvider
     {
         $this->publishFiles();
         $this->loadRoutesFrom(__DIR__.'/../Routes/web.php');
+        $this->mergeConfigFrom(__DIR__.'/../Config/installer.php', 'installer');
 //        $this->mapWebRoutes();
     }
 
