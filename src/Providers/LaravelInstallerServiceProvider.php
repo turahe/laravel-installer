@@ -18,15 +18,6 @@ class LaravelInstallerServiceProvider extends ServiceProvider
     protected $defer = false;
 
     /**
-     * This namespace is applied to your controller routes.
-     *
-     * In addition, it is set as the URL generator's root namespace.
-     *
-     * @var string
-     */
-    protected $namespace = 'Turahe\LaravelInstaller\Controllers';
-
-    /**
      * Register the service provider.
      *
      * @return void
@@ -45,6 +36,7 @@ class LaravelInstallerServiceProvider extends ServiceProvider
      */
     public function boot(Router $router)
     {
+        $this->loadViewsFrom(__DIR__.'/Views', 'installer');
         $router->middlewareGroup('install', [CanInstall::class]);
         $router->middlewareGroup('update', [CanUpdate::class]);
     }
@@ -66,8 +58,6 @@ class LaravelInstallerServiceProvider extends ServiceProvider
             __DIR__.'/../assets' => public_path('installer'),
         ], 'laravelinstaller');
 
-//        dd($this->loadViewsFrom(__DIR__ . '/Views', ''));
-//        $this->loadViewsFrom(__DIR__ . '/Views', 'laravel-installer');
 
         $this->publishes([
             __DIR__.'/../Views' => base_path('resources/views/vendor/installer'),
@@ -78,18 +68,4 @@ class LaravelInstallerServiceProvider extends ServiceProvider
         ], 'laravelinstaller');
     }
 
-    /**
-     * Define the "web" routes for the application.
-     *
-     * These routes all receive session state, CSRF protection, etc.
-     *
-     * @return void
-     */
-    protected function mapWebRoutes()
-    {
-        Route::middleware(['web', 'installed'])
-            ->prefix('install')
-            ->namespace($this->namespace)
-            ->group(base_path('routes/web.php'));
-    }
 }

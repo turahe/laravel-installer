@@ -31,6 +31,6 @@ class PermissionsController extends Controller
             config('installer.permissions')
         );
 
-        return view('vendor.installer.permissions', compact('permissions'));
+        return view('laravel-installer::permissions', compact('permissions'));
     }
 }
