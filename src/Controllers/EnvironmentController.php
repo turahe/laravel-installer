@@ -33,7 +33,7 @@ class EnvironmentController extends Controller
      */
     public function environmentMenu()
     {
-        return view('laravel-installer::environment');
+        return view('installer::environment');
     }
 
     /**
@@ -45,7 +45,7 @@ class EnvironmentController extends Controller
     {
         $envConfig = $this->EnvironmentManager->getEnvContent();
 
-        return view('laravel-installer::environment-wizard', compact('envConfig'));
+        return view('installer::environment-wizard', compact('envConfig'));
     }
 
     /**
@@ -57,7 +57,7 @@ class EnvironmentController extends Controller
     {
         $envConfig = $this->EnvironmentManager->getEnvContent();
 
-        return view('laravel-installer::environment-classic', compact('envConfig'));
+        return view('installer::environment-classic', compact('envConfig'));
     }
 
     /**

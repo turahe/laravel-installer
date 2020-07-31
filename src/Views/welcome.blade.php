@@ -1,4 +1,4 @@
-@extends('vendor.installer.layouts.master')
+@extends('installer::layouts.master')
 
 @section('template_title')
     {{ trans('installer_messages.welcome.templateTitle') }}

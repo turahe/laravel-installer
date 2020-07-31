@@ -17,7 +17,7 @@ class UpdateController extends Controller
      */
     public function welcome()
     {
-        return view('laravel-installer::update.welcome');
+        return view('installer::update.welcome');
     }
 
     /**
@@ -30,7 +30,7 @@ class UpdateController extends Controller
         $migrations = $this->getMigrations();
         $dbMigrations = $this->getExecutedMigrations();
 
-        return view('laravel-installer::update.overview', ['numberOfUpdatesPending' => count($migrations) - count($dbMigrations)]);
+        return view('installer::update.overview', ['numberOfUpdatesPending' => count($migrations) - count($dbMigrations)]);
     }
 
     /**
@@ -57,6 +57,6 @@ class UpdateController extends Controller
     {
         $fileManager->update();
 
-        return view('laravel-installer::update.finished');
+        return view('installer::update.finished');
     }
 }
