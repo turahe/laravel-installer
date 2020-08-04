@@ -2,6 +2,7 @@
 
 namespace Turahe\LaravelInstaller\Controllers;
 
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Routing\Controller;
 use Turahe\LaravelInstaller\Helpers\DatabaseManager;
 
@@ -10,7 +11,7 @@ class DatabaseController extends Controller
     /**
      * @var DatabaseManager
      */
-    private $databaseManager;
+    private DatabaseManager $databaseManager;
 
     /**
      * @param DatabaseManager $databaseManager
@@ -23,9 +24,9 @@ class DatabaseController extends Controller
     /**
      * Migrate and seed the database.
      *
-     * @return \Illuminate\Http\RedirectResponse
+     * @return RedirectResponse
      */
-    public function database()
+    public function database(): RedirectResponse
     {
         $response = $this->databaseManager->migrateAndSeed();
 

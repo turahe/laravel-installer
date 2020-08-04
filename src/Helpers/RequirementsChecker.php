@@ -7,9 +7,9 @@ class RequirementsChecker
     /**
      * Minimum PHP Version Supported (Override is in installer.php config file).
      *
-     * @var _minPhpVersion
+     * @var string
      */
-    private $_minPhpVersion = '7.0.0';
+    private string $_minPhpVersion = '7.4';
 
     /**
      * Check for the server requirements.
@@ -17,7 +17,7 @@ class RequirementsChecker
      * @param array $requirements
      * @return array
      */
-    public function check(array $requirements)
+    public function check(array $requirements): array
     {
         $results = [];
 
@@ -50,6 +50,8 @@ class RequirementsChecker
                         }
                     }
                     break;
+                default:
+                    throw new \Exception('Unexpected value');
             }
         }
 
@@ -59,9 +61,10 @@ class RequirementsChecker
     /**
      * Check PHP version requirement.
      *
+     * @param string|null $minPhpVersion
      * @return array
      */
-    public function checkPHPversion(string $minPhpVersion = null)
+    public function checkPHPversion(string $minPhpVersion = null): array
     {
         $minVersionPhp = $minPhpVersion;
         $currentPhpVersion = $this->getPhpVersionInfo();
@@ -90,7 +93,7 @@ class RequirementsChecker
      *
      * @return array
      */
-    private static function getPhpVersionInfo()
+    private static function getPhpVersionInfo(): array
     {
         $currentVersionFull = PHP_VERSION;
         preg_match("#^\d+(\.\d+)*#", $currentVersionFull, $filtered);

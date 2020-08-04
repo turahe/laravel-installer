@@ -3,20 +3,22 @@
 namespace Turahe\LaravelInstaller\Controllers;
 
 use Exception;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\View\View;
 use Turahe\LaravelInstaller\Events\EnvironmentSaved;
 use Turahe\LaravelInstaller\Helpers\EnvironmentManager;
-use Validator;
 
 class EnvironmentController extends Controller
 {
     /**
      * @var EnvironmentManager
      */
-    protected $EnvironmentManager;
+    protected EnvironmentManager $EnvironmentManager;
 
     /**
      * @param EnvironmentManager $environmentManager
@@ -29,9 +31,9 @@ class EnvironmentController extends Controller
     /**
      * Display the Environment menu page.
      *
-     * @return \Illuminate\View\View
+     * @return View
      */
-    public function environmentMenu()
+    public function environmentMenu(): View
     {
         return view('installer::environment');
     }
@@ -39,7 +41,7 @@ class EnvironmentController extends Controller
     /**
      * Display the Environment page.
      *
-     * @return \Illuminate\View\View
+     * @return View
      */
     public function environmentWizard()
     {
@@ -51,9 +53,9 @@ class EnvironmentController extends Controller
     /**
      * Display the Environment page.
      *
-     * @return \Illuminate\View\View
+     * @return View
      */
-    public function environmentClassic()
+    public function environmentClassic(): View
     {
         $envConfig = $this->EnvironmentManager->getEnvContent();
 
@@ -65,9 +67,9 @@ class EnvironmentController extends Controller
      *
      * @param Request $input
      * @param Redirector $redirect
-     * @return \Illuminate\Http\RedirectResponse
+     * @return RedirectResponse
      */
-    public function saveClassic(Request $input, Redirector $redirect)
+    public function saveClassic(Request $input, Redirector $redirect): RedirectResponse
     {
         $message = $this->EnvironmentManager->saveFileClassic($input);
 
@@ -82,9 +84,9 @@ class EnvironmentController extends Controller
      *
      * @param Request $request
      * @param Redirector $redirect
-     * @return \Illuminate\Http\RedirectResponse
+     * @return RedirectResponse
      */
-    public function saveWizard(Request $request, Redirector $redirect)
+    public function saveWizard(Request $request, Redirector $redirect): RedirectResponse
     {
         $rules = config('installer.environment.form.rules');
         $messages = [
@@ -112,7 +114,8 @@ class EnvironmentController extends Controller
     }
 
     /**
-     * TODO: We can remove this code if PR will be merged: https://github.com/RachidLaasri/LaravelInstaller/pull/162
+     * TODO: We can remove this code if PR will be merged:
+     * https://github.com/RachidLaasri/LaravelInstaller/pull/162
      * Validate database connection with user credentials (Form Wizard).
      *
      * @param Request $request

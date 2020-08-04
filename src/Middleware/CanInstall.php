@@ -3,17 +3,19 @@
 namespace Turahe\LaravelInstaller\Middleware;
 
 use Closure;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
 
 class CanInstall
 {
     /**
      * Handle an incoming request.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure  $next
-     * @return \Illuminate\Http\RedirectResponse|mixed
+     * @param  Request  $request
+     * @param Closure $next
+     * @return mixed|RedirectResponse
      */
-    public function handle($request, Closure $next)
+    public function handle($request, Closure $next): RedirectResponse
     {
         if ($this->alreadyInstalled()) {
             $installedRedirect = config('installer.installedAlreadyAction');
@@ -52,7 +54,7 @@ class CanInstall
      *
      * @return bool
      */
-    public function alreadyInstalled()
+    public function alreadyInstalled(): bool
     {
         return file_exists(storage_path('installed'));
     }

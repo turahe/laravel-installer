@@ -3,6 +3,7 @@
 namespace Turahe\LaravelInstaller\Controllers;
 
 use Illuminate\Routing\Controller;
+use Illuminate\View\View;
 use Turahe\LaravelInstaller\Events\LaravelInstallerFinished;
 use Turahe\LaravelInstaller\Helpers\EnvironmentManager;
 use Turahe\LaravelInstaller\Helpers\FinalInstallManager;
@@ -16,16 +17,22 @@ class FinalController extends Controller
      * @param InstalledFileManager $fileManager
      * @param FinalInstallManager $finalInstall
      * @param EnvironmentManager $environment
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @return View
      */
-    public function finish(InstalledFileManager $fileManager, FinalInstallManager $finalInstall, EnvironmentManager $environment)
-    {
+    public function finish(
+        InstalledFileManager $fileManager,
+        FinalInstallManager $finalInstall,
+        EnvironmentManager $environment
+    ): View {
         $finalMessages = $finalInstall->runFinal();
         $finalStatusMessage = $fileManager->update();
         $finalEnvFile = $environment->getEnvContent();
 
         event(new LaravelInstallerFinished);
 
-        return view('installer::finished', compact('finalMessages', 'finalStatusMessage', 'finalEnvFile'));
+        return view(
+            'installer::finished',
+            compact('finalMessages', 'finalStatusMessage', 'finalEnvFile')
+        );
     }
 }

@@ -3,7 +3,6 @@
 namespace Turahe\LaravelInstaller\Providers;
 
 use Illuminate\Routing\Router;
-use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 use Turahe\LaravelInstaller\Middleware\canInstall;
 use Turahe\LaravelInstaller\Middleware\canUpdate;
@@ -15,7 +14,7 @@ class LaravelInstallerServiceProvider extends ServiceProvider
      *
      * @var bool
      */
-    protected $defer = false;
+    protected bool $defer = false;
 
     /**
      * Register the service provider.
@@ -68,5 +67,4 @@ class LaravelInstallerServiceProvider extends ServiceProvider
             __DIR__.'/../Lang' => base_path('resources/lang'),
         ], 'laravelinstaller');
     }
-
 }

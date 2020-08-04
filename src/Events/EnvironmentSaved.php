@@ -3,15 +3,23 @@
 namespace Turahe\LaravelInstaller\Events;
 
 use Illuminate\Broadcasting\InteractsWithSockets;
+use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Http\Request;
 use Illuminate\Queue\SerializesModels;
 
-class EnvironmentSaved
+/**
+ * Class EnvironmentSaved
+ * @package Turahe\LaravelInstaller\Events
+ */
+class EnvironmentSaved implements ShouldQueue
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
-    private $request;
+    /**
+     * @var Request
+     */
+    private Request $request;
 
     /**
      * Create a new event instance.
@@ -24,6 +32,9 @@ class EnvironmentSaved
         $this->request = $request;
     }
 
+    /**
+     * @return Request
+     */
     public function getRequest()
     {
         return $this->request;

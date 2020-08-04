@@ -2,20 +2,23 @@
 
 namespace Turahe\LaravelInstaller\Controllers;
 
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Routing\Controller;
+use Illuminate\View\View;
 use Turahe\LaravelInstaller\Helpers\DatabaseManager;
 use Turahe\LaravelInstaller\Helpers\InstalledFileManager;
+use Turahe\LaravelInstaller\Helpers\MigrationsHelper;
 
 class UpdateController extends Controller
 {
-    use \Turahe\LaravelInstaller\Helpers\MigrationsHelper;
+    use MigrationsHelper;
 
     /**
      * Display the updater welcome page.
      *
-     * @return \Illuminate\View\View
+     * @return View
      */
-    public function welcome()
+    public function welcome(): View
     {
         return view('installer::update.welcome');
     }
@@ -23,9 +26,9 @@ class UpdateController extends Controller
     /**
      * Display the updater overview page.
      *
-     * @return \Illuminate\View\View
+     * @return View
      */
-    public function overview()
+    public function overview(): View
     {
         $migrations = $this->getMigrations();
         $dbMigrations = $this->getExecutedMigrations();
@@ -36,9 +39,9 @@ class UpdateController extends Controller
     /**
      * Migrate and seed the database.
      *
-     * @return \Illuminate\Http\RedirectResponse
+     * @return RedirectResponse
      */
-    public function database()
+    public function database(): RedirectResponse
     {
         $databaseManager = new DatabaseManager;
         $response = $databaseManager->migrateAndSeed();
@@ -51,7 +54,7 @@ class UpdateController extends Controller
      * Update installed file and display finished view.
      *
      * @param InstalledFileManager $fileManager
-     * @return \Illuminate\View\View
+     * @return View
      */
     public function finish(InstalledFileManager $fileManager)
     {

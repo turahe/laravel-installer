@@ -3,6 +3,7 @@
 namespace Turahe\LaravelInstaller\Controllers;
 
 use Illuminate\Routing\Controller;
+use Illuminate\View\View;
 use Turahe\LaravelInstaller\Helpers\RequirementsChecker;
 
 class RequirementsController extends Controller
@@ -10,7 +11,7 @@ class RequirementsController extends Controller
     /**
      * @var RequirementsChecker
      */
-    protected $requirements;
+    protected RequirementsChecker $requirements;
 
     /**
      * @param RequirementsChecker $checker
@@ -23,9 +24,9 @@ class RequirementsController extends Controller
     /**
      * Display the requirements page.
      *
-     * @return \Illuminate\View\View
+     * @return View
      */
-    public function requirements()
+    public function requirements(): View
     {
         $phpSupportInfo = $this->requirements->checkPHPversion(
             config('installer.core.minPhpVersion')

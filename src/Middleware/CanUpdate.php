@@ -3,19 +3,22 @@
 namespace Turahe\LaravelInstaller\Middleware;
 
 use Closure;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
+use Turahe\LaravelInstaller\Helpers\MigrationsHelper;
 
 class CanUpdate
 {
-    use \Turahe\LaravelInstaller\Helpers\MigrationsHelper;
+    use MigrationsHelper;
 
     /**
      * Handle an incoming request.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure  $next
-     * @return mixed
+     * @param  Request  $request
+     * @param Closure $next
+     * @return RedirectResponse|mixed
      */
-    public function handle($request, Closure $next)
+    public function handle($request, Closure $next): RedirectResponse
     {
         $updateEnabled = filter_var(config('installer.updaterEnabled'), FILTER_VALIDATE_BOOLEAN);
         switch ($updateEnabled) {
@@ -47,7 +50,7 @@ class CanUpdate
      *
      * @return bool
      */
-    public function alreadyUpdated()
+    public function alreadyUpdated(): bool
     {
         $migrations = $this->getMigrations();
         $dbMigrations = $this->getExecutedMigrations();

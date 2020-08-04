@@ -3,6 +3,7 @@
 namespace Turahe\LaravelInstaller\Controllers;
 
 use Illuminate\Routing\Controller;
+use Illuminate\View\View;
 use Turahe\LaravelInstaller\Helpers\PermissionsChecker;
 
 class PermissionsController extends Controller
@@ -10,7 +11,7 @@ class PermissionsController extends Controller
     /**
      * @var PermissionsChecker
      */
-    protected $permissions;
+    protected PermissionsChecker $permissions;
 
     /**
      * @param PermissionsChecker $checker
@@ -23,9 +24,9 @@ class PermissionsController extends Controller
     /**
      * Display the permissions check page.
      *
-     * @return \Illuminate\View\View
+     * @return View
      */
-    public function permissions()
+    public function permissions(): View
     {
         $permissions = $this->permissions->check(
             config('installer.permissions')
