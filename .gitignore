@@ -23,6 +23,8 @@ Thumbs.db
 ### DIFFERENT TYPE OF MASTER CONFIGS ###
 composer.lock
 .env
+.php_cs.cache
+.phpunit.result.cache
 
 ### ASSET EXCLUSIONS ###
 vendor/
