@@ -10,4 +10,5 @@
 
 
 ## License
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fturahe%2Flaravel-installer.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fturahe%2Flaravel-installer?ref=badge_large)
+
+This project is released under the [MIT](http://opensource.org/licenses/MIT) license.
