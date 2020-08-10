@@ -3,8 +3,8 @@
 namespace Turahe\LaravelInstaller\Middleware;
 
 use Closure;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Http\RedirectResponse;
 use Turahe\LaravelInstaller\Helpers\MigrationsHelper;
 
 class CanUpdate

@@ -2,15 +2,14 @@
 
 namespace Turahe\LaravelInstaller\Events;
 
-use Illuminate\Broadcasting\InteractsWithSockets;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Http\Request;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Foundation\Events\Dispatchable;
+use Illuminate\Broadcasting\InteractsWithSockets;
 
 /**
- * Class EnvironmentSaved
- * @package Turahe\LaravelInstaller\Events
+ * Class EnvironmentSaved.
  */
 class EnvironmentSaved implements ShouldQueue
 {

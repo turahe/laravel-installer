@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Tests\Integration;
 
 class LaravelInstallerServiceProviderTest extends TestCase

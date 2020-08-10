@@ -2,8 +2,8 @@
 
 namespace Turahe\LaravelInstaller\Controllers;
 
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Routing\Controller;
+use Illuminate\Http\RedirectResponse;
 use Turahe\LaravelInstaller\Helpers\DatabaseManager;
 
 class DatabaseController extends Controller

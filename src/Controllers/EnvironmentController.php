@@ -3,13 +3,13 @@
 namespace Turahe\LaravelInstaller\Controllers;
 
 use Exception;
-use Illuminate\Http\RedirectResponse;
+use Illuminate\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\View\View;
 use Turahe\LaravelInstaller\Events\EnvironmentSaved;
 use Turahe\LaravelInstaller\Helpers\EnvironmentManager;
 

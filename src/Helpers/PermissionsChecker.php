@@ -73,7 +73,6 @@ class PermissionsChecker
      * @param $folder
      * @param $permission
      * @param $isSet
-     *
      */
     private function addFileAndSetErrors($folder, $permission, $isSet)
     {

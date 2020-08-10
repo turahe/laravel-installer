@@ -2,12 +2,12 @@
 
 namespace Turahe\LaravelInstaller\Controllers;
 
-use Illuminate\Routing\Controller;
 use Illuminate\View\View;
-use Turahe\LaravelInstaller\Events\LaravelInstallerFinished;
+use Illuminate\Routing\Controller;
 use Turahe\LaravelInstaller\Helpers\EnvironmentManager;
 use Turahe\LaravelInstaller\Helpers\FinalInstallManager;
 use Turahe\LaravelInstaller\Helpers\InstalledFileManager;
+use Turahe\LaravelInstaller\Events\LaravelInstallerFinished;
 
 class FinalController extends Controller
 {

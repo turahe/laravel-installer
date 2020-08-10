@@ -3,10 +3,10 @@
 namespace Turahe\LaravelInstaller\Helpers;
 
 use Exception;
-use Illuminate\Database\SQLiteConnection;
-use Illuminate\Support\Facades\Artisan;
-use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Database\SQLiteConnection;
 use Symfony\Component\Console\Output\BufferedOutput;
 
 class DatabaseManager

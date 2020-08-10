@@ -4,8 +4,8 @@ namespace Turahe\LaravelInstaller\Providers;
 
 use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
-use Turahe\LaravelInstaller\Middleware\canInstall;
 use Turahe\LaravelInstaller\Middleware\canUpdate;
+use Turahe\LaravelInstaller\Middleware\canInstall;
 
 class LaravelInstallerServiceProvider extends ServiceProvider
 {
@@ -50,14 +50,13 @@ class LaravelInstallerServiceProvider extends ServiceProvider
     {
         if (function_exists('config_path')) { // function not available and 'publish' not relevant in Lumen
             $this->publishes([
-                __DIR__ . '/../Config/installer.php' => base_path('config/installer.php'),
+                __DIR__.'/../Config/installer.php' => base_path('config/installer.php'),
             ], 'laravelinstaller');
         }
 
         $this->publishes([
             __DIR__.'/../assets' => public_path('installer'),
         ], 'laravelinstaller');
-
 
         $this->publishes([
             __DIR__.'/../Views' => base_path('resources/views/vendor/installer'),

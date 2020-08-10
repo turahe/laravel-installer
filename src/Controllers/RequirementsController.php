@@ -2,8 +2,8 @@
 
 namespace Turahe\LaravelInstaller\Controllers;
 
-use Illuminate\Routing\Controller;
 use Illuminate\View\View;
+use Illuminate\Routing\Controller;
 use Turahe\LaravelInstaller\Helpers\RequirementsChecker;
 
 class RequirementsController extends Controller

@@ -2,12 +2,12 @@
 
 namespace Turahe\LaravelInstaller\Controllers;
 
-use Illuminate\Http\RedirectResponse;
-use Illuminate\Routing\Controller;
 use Illuminate\View\View;
+use Illuminate\Routing\Controller;
+use Illuminate\Http\RedirectResponse;
 use Turahe\LaravelInstaller\Helpers\DatabaseManager;
-use Turahe\LaravelInstaller\Helpers\InstalledFileManager;
 use Turahe\LaravelInstaller\Helpers\MigrationsHelper;
+use Turahe\LaravelInstaller\Helpers\InstalledFileManager;
 
 class UpdateController extends Controller
 {

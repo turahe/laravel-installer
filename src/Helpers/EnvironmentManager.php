@@ -3,8 +3,8 @@
 namespace Turahe\LaravelInstaller\Helpers;
 
 use Exception;
-use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Illuminate\Http\Request;
 
 class EnvironmentManager
 {

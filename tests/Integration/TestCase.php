@@ -1,14 +1,12 @@
 <?php
 
-
 namespace Tests\Integration;
 
 use Orchestra\Testbench\TestCase as Orchestra;
 use Turahe\LaravelInstaller\Providers\LaravelInstallerServiceProvider;
 
 /**
- * Class TestCase
- * @package Tests\Integration
+ * Class TestCase.
  */
 class TestCase extends Orchestra
 {
