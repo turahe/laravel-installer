@@ -16,7 +16,7 @@ class CanUpdate
      *
      * @param  Request  $request
      * @param Closure $next
-     * @return RedirectResponse|mixed
+     * @return mixed|RedirectResponse
      */
     public function handle($request, Closure $next): RedirectResponse
     {
