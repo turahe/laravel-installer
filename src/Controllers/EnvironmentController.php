@@ -14,8 +14,7 @@ use Turahe\LaravelInstaller\Events\EnvironmentSaved;
 use Turahe\LaravelInstaller\Helpers\EnvironmentManager;
 
 /**
- * Class EnvironmentController
- * @package Turahe\LaravelInstaller\Controllers
+ * Class EnvironmentController.
  */
 class EnvironmentController extends Controller
 {

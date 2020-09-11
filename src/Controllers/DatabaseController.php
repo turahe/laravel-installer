@@ -7,8 +7,7 @@ use Illuminate\Http\RedirectResponse;
 use Turahe\LaravelInstaller\Helpers\DatabaseManager;
 
 /**
- * Class DatabaseController
- * @package Turahe\LaravelInstaller\Controllers
+ * Class DatabaseController.
  */
 class DatabaseController extends Controller
 {

@@ -8,8 +8,7 @@ use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
 
 /**
- * Class LaravelInstallerFinished
- * @package Turahe\LaravelInstaller\Events
+ * Class LaravelInstallerFinished.
  */
 class LaravelInstallerFinished implements ShouldQueue
 {

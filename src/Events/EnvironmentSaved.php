@@ -8,10 +8,8 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
 
-
 /**
- * Class EnvironmentSaved
- * @package Turahe\LaravelInstaller\Events
+ * Class EnvironmentSaved.
  */
 class EnvironmentSaved implements ShouldQueue
 {

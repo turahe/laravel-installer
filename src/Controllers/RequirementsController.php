@@ -7,8 +7,7 @@ use Illuminate\Routing\Controller;
 use Turahe\LaravelInstaller\Helpers\RequirementsChecker;
 
 /**
- * Class RequirementsController
- * @package Turahe\LaravelInstaller\Controllers
+ * Class RequirementsController.
  */
 class RequirementsController extends Controller
 {

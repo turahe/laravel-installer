@@ -8,8 +8,7 @@ use Turahe\LaravelInstaller\Middleware\canUpdate;
 use Turahe\LaravelInstaller\Middleware\canInstall;
 
 /**
- * Class LaravelInstallerServiceProvider
- * @package Turahe\LaravelInstaller\Providers
+ * Class LaravelInstallerServiceProvider.
  */
 class LaravelInstallerServiceProvider extends ServiceProvider
 {

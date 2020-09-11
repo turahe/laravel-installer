@@ -10,8 +10,7 @@ use Illuminate\Database\SQLiteConnection;
 use Symfony\Component\Console\Output\BufferedOutput;
 
 /**
- * Class DatabaseManager
- * @package Turahe\LaravelInstaller\Helpers
+ * Class DatabaseManager.
  */
 class DatabaseManager
 {

@@ -10,8 +10,7 @@ use Turahe\LaravelInstaller\Helpers\MigrationsHelper;
 use Turahe\LaravelInstaller\Helpers\InstalledFileManager;
 
 /**
- * Class UpdateController
- * @package Turahe\LaravelInstaller\Controllers
+ * Class UpdateController.
  */
 class UpdateController extends Controller
 {

@@ -7,8 +7,7 @@ use Illuminate\Support\Facades\Artisan;
 use Symfony\Component\Console\Output\BufferedOutput;
 
 /**
- * Class FinalInstallManager
- * @package Turahe\LaravelInstaller\Helpers
+ * Class FinalInstallManager.
  */
 class FinalInstallManager
 {

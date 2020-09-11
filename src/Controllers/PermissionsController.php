@@ -7,8 +7,7 @@ use Illuminate\Routing\Controller;
 use Turahe\LaravelInstaller\Helpers\PermissionsChecker;
 
 /**
- * Class PermissionsController
- * @package Turahe\LaravelInstaller\Controllers
+ * Class PermissionsController.
  */
 class PermissionsController extends Controller
 {

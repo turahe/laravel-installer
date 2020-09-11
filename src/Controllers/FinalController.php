@@ -10,8 +10,7 @@ use Turahe\LaravelInstaller\Helpers\InstalledFileManager;
 use Turahe\LaravelInstaller\Events\LaravelInstallerFinished;
 
 /**
- * Class FinalController
- * @package Turahe\LaravelInstaller\Controllers
+ * Class FinalController.
  */
 class FinalController extends Controller
 {

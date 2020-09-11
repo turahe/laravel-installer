@@ -3,8 +3,7 @@
 namespace Turahe\LaravelInstaller\Helpers;
 
 /**
- * Class RequirementsChecker
- * @package Turahe\LaravelInstaller\Helpers
+ * Class RequirementsChecker.
  */
 class RequirementsChecker
 {

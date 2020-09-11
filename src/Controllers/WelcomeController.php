@@ -6,8 +6,7 @@ use Illuminate\View\View;
 use Illuminate\Routing\Controller;
 
 /**
- * Class WelcomeController
- * @package Turahe\LaravelInstaller\Controllers
+ * Class WelcomeController.
  */
 class WelcomeController extends Controller
 {

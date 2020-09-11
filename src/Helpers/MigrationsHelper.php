@@ -5,8 +5,7 @@ namespace Turahe\LaravelInstaller\Helpers;
 use Illuminate\Support\Facades\DB;
 
 /**
- * Trait MigrationsHelper
- * @package Turahe\LaravelInstaller\Helpers
+ * Trait MigrationsHelper.
  */
 trait MigrationsHelper
 {
