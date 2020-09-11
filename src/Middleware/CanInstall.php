@@ -6,6 +6,10 @@ use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 
+/**
+ * Class CanInstall
+ * @package Turahe\LaravelInstaller\Middleware
+ */
 class CanInstall
 {
     /**

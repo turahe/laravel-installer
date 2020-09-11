@@ -2,6 +2,10 @@
 
 namespace Turahe\LaravelInstaller\Helpers;
 
+/**
+ * Class InstalledFileManager
+ * @package Turahe\LaravelInstaller\Helpers
+ */
 class InstalledFileManager
 {
     /**

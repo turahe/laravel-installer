@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Validator;
 use Turahe\LaravelInstaller\Events\EnvironmentSaved;
 use Turahe\LaravelInstaller\Helpers\EnvironmentManager;
 
+/**
+ * Class EnvironmentController
+ * @package Turahe\LaravelInstaller\Controllers
+ */
 class EnvironmentController extends Controller
 {
     /**

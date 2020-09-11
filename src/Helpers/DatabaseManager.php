@@ -9,6 +9,10 @@ use Illuminate\Support\Facades\Artisan;
 use Illuminate\Database\SQLiteConnection;
 use Symfony\Component\Console\Output\BufferedOutput;
 
+/**
+ * Class DatabaseManager
+ * @package Turahe\LaravelInstaller\Helpers
+ */
 class DatabaseManager
 {
     /**

@@ -2,6 +2,10 @@
 
 namespace Turahe\LaravelInstaller\Helpers;
 
+/**
+ * Class PermissionsChecker
+ * @package Turahe\LaravelInstaller\Helpers
+ */
 class PermissionsChecker
 {
     /**

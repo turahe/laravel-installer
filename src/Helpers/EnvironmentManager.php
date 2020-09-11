@@ -6,6 +6,10 @@ use Exception;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
+/**
+ * Class EnvironmentManager
+ * @package Turahe\LaravelInstaller\Helpers
+ */
 class EnvironmentManager
 {
     /**

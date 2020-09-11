@@ -7,6 +7,10 @@ use Illuminate\Support\ServiceProvider;
 use Turahe\LaravelInstaller\Middleware\canUpdate;
 use Turahe\LaravelInstaller\Middleware\canInstall;
 
+/**
+ * Class LaravelInstallerServiceProvider
+ * @package Turahe\LaravelInstaller\Providers
+ */
 class LaravelInstallerServiceProvider extends ServiceProvider
 {
     /**

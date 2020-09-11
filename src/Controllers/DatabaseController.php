@@ -6,6 +6,10 @@ use Illuminate\Routing\Controller;
 use Illuminate\Http\RedirectResponse;
 use Turahe\LaravelInstaller\Helpers\DatabaseManager;
 
+/**
+ * Class DatabaseController
+ * @package Turahe\LaravelInstaller\Controllers
+ */
 class DatabaseController extends Controller
 {
     /**

@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use Turahe\LaravelInstaller\Helpers\MigrationsHelper;
 
+/**
+ * Class CanUpdate
+ * @package Turahe\LaravelInstaller\Middleware
+ */
 class CanUpdate
 {
     use MigrationsHelper;

@@ -6,6 +6,10 @@ use Illuminate\View\View;
 use Illuminate\Routing\Controller;
 use Turahe\LaravelInstaller\Helpers\PermissionsChecker;
 
+/**
+ * Class PermissionsController
+ * @package Turahe\LaravelInstaller\Controllers
+ */
 class PermissionsController extends Controller
 {
     /**
