@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Tests\Unit;
 
 use Illuminate\Http\Response;
@@ -15,8 +14,8 @@ class WelcomeUnitTest extends Orchestra
 
         $router->get('welcome', 'Turahe\LaravelInstaller\Controllers\WelcomeController@welcome')
             ->name('install.welcome');
-
     }
+
     protected function getLastRouteMiddlewareFromRouter($router)
     {
         return last($router->getRoutes()->get())->middleware();
