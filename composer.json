@@ -2,14 +2,26 @@
     "name": "turahe/laravel-installer",
     "description": "Laravel web installer",
     "license": "MIT",
+    "type": "library",
+    "keywords": [
+        "trait",
+        "laravel",
+        "eloquent",
+        "installer",
+        "Web"
+    ],
     "authors": [
         {
             "name": "Nur Wachid",
-            "email": "wachid@outlook.com"
+            "email": "wachid@outlook.com",
+            "homepage": "https://turahe.id",
+            "role": "Developer"
         }
     ],
     "require": {
-        "php": "^7.4"
+        "php": "^7.3",
+        "illuminate/database": "^8.0",
+        "illuminate/support": "^8.0"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.16",
@@ -35,8 +47,12 @@
             ]
         }
     },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
     "config": {
         "sort-packages": true
     },
-    "minimum-stability": "stable"
+    "minimum-stability": "stable",
+    "prefer-stable" : true
 }
