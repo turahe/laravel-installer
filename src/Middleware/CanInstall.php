@@ -16,9 +16,9 @@ class CanInstall
      *
      * @param  Request  $request
      * @param Closure $next
-     * @return mixed|RedirectResponse
+     * @return mixed
      */
-    public function handle($request, Closure $next): RedirectResponse
+    public function handle($request, Closure $next)
     {
         if ($this->alreadyInstalled()) {
             $installedRedirect = config('installer.installedAlreadyAction');

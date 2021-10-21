@@ -39,7 +39,7 @@ class LaravelInstallerServiceProvider extends ServiceProvider
      */
     public function boot(Router $router)
     {
-        $this->loadViewsFrom(__DIR__.'/Views', 'installer');
+        $this->loadViewsFrom(__DIR__.'./../Views', 'installer');
         $router->middlewareGroup('install', [CanInstall::class]);
         $router->middlewareGroup('update', [CanUpdate::class]);
     }
