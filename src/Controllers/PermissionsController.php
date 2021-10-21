@@ -17,7 +17,7 @@ class PermissionsController extends Controller
     protected PermissionsChecker $permissions;
 
     /**
-     * @param PermissionsChecker $checker
+     * @param  PermissionsChecker  $checker
      */
     public function __construct(PermissionsChecker $checker)
     {

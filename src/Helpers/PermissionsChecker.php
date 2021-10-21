@@ -27,7 +27,7 @@ class PermissionsChecker
     /**
      * Check for the folders permissions.
      *
-     * @param array $folders
+     * @param  array  $folders
      * @return array
      */
     public function check(array $folders): array

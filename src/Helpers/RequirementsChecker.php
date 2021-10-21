@@ -17,7 +17,7 @@ class RequirementsChecker
     /**
      * Check for the server requirements.
      *
-     * @param array $requirements
+     * @param  array  $requirements
      * @return array
      */
     public function check(array $requirements): array
@@ -64,7 +64,7 @@ class RequirementsChecker
     /**
      * Check PHP version requirement.
      *
-     * @param null|string $minPhpVersion
+     * @param  null|string  $minPhpVersion
      * @return array
      */
     public function checkPHPversion(string $minPhpVersion = null): array

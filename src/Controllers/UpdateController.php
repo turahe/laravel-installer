@@ -56,7 +56,7 @@ class UpdateController extends Controller
     /**
      * Update installed file and display finished view.
      *
-     * @param InstalledFileManager $fileManager
+     * @param  InstalledFileManager  $fileManager
      * @return View
      */
     public function finish(InstalledFileManager $fileManager)

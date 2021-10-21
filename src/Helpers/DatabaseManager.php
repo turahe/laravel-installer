@@ -31,7 +31,7 @@ class DatabaseManager
     /**
      * Run the migration and call the seeder.
      *
-     * @param BufferedOutput $outputLog
+     * @param  BufferedOutput  $outputLog
      * @return array
      */
     private function migrate(BufferedOutput $outputLog)
@@ -48,7 +48,7 @@ class DatabaseManager
     /**
      * Seed the database.
      *
-     * @param BufferedOutput $outputLog
+     * @param  BufferedOutput  $outputLog
      * @return array
      */
     private function seed(BufferedOutput $outputLog)
@@ -65,9 +65,9 @@ class DatabaseManager
     /**
      * Return a formatted error messages.
      *
-     * @param string $message
-     * @param string $status
-     * @param BufferedOutput $outputLog
+     * @param  string  $message
+     * @param  string  $status
+     * @param  BufferedOutput  $outputLog
      * @return array
      */
     private function response($message, $status, BufferedOutput $outputLog)
@@ -82,7 +82,7 @@ class DatabaseManager
     /**
      * Check database type. If SQLite, then create the database file.
      *
-     * @param BufferedOutput $outputLog
+     * @param  BufferedOutput  $outputLog
      */
     private function sqlite(BufferedOutput $outputLog)
     {

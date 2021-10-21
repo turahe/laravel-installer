@@ -29,7 +29,7 @@ class FinalInstallManager
     /**
      * Generate New Application Key.
      *
-     * @param BufferedOutput $outputLog
+     * @param  BufferedOutput  $outputLog
      * @return array|BufferedOutput
      */
     private static function generateKey(BufferedOutput $outputLog)
@@ -48,7 +48,7 @@ class FinalInstallManager
     /**
      * Publish vendor assets.
      *
-     * @param BufferedOutput $outputLog
+     * @param  BufferedOutput  $outputLog
      * @return array|BufferedOutput
      */
     private static function publishVendorAssets(BufferedOutput $outputLog)
@@ -68,7 +68,7 @@ class FinalInstallManager
      * Return a formatted error messages.
      *
      * @param $message
-     * @param BufferedOutput $outputLog
+     * @param  BufferedOutput  $outputLog
      * @return array
      */
     private static function response($message, BufferedOutput $outputLog)

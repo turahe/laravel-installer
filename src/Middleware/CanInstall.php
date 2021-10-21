@@ -15,7 +15,7 @@ class CanInstall
      * Handle an incoming request.
      *
      * @param  Request  $request
-     * @param Closure $next
+     * @param  Closure  $next
      * @return mixed|RedirectResponse
      */
     public function handle($request, Closure $next): RedirectResponse
