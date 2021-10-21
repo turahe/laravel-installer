@@ -10,7 +10,18 @@
 [![StyleCI](https://github.styleci.io/repos/283962876/shield?branch=master)](https://github.styleci.io/repos/283962876?branch=master)
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fturahe%2Flaravel-installer.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fturahe%2Flaravel-installer?ref=badge_shield)
 
+## Installation
+
+The first step is using composer to install the package and automatically update your composer.json file, you can do this by running:
+
+```
+composer require turahe/seotools
+```
+
+> **Note**: If you are using Laravel 5.5, the steps 2 and 3, for providers and aliases, are unnecessaries. SEOTools supports Laravel new Package Discovery.
+
 
 ## License
 
 This project is released under the [MIT](http://opensource.org/licenses/MIT) license.
+
