@@ -4,7 +4,6 @@ namespace Turahe\LaravelInstaller\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
-use Illuminate\Http\RedirectResponse;
 
 /**
  * Class CanInstall.
@@ -15,13 +14,8 @@ class CanInstall
      * Handle an incoming request.
      *
      * @param  Request  $request
-<<<<<<< HEAD
      * @param Closure $next
      * @return mixed
-=======
-     * @param  Closure  $next
-     * @return mixed|RedirectResponse
->>>>>>> c6bf63e75311da1c57fa91d587f9f4745d31f599
      */
     public function handle($request, Closure $next)
     {
