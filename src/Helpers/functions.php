@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-if (!function_exists('set_active')) {
+if (! function_exists('set_active')) {
 
     /**
      * Menambahkan CSS class active Pada Menu Sesuai Route yang di Akses di Laravel 5.
@@ -11,7 +11,7 @@ if (!function_exists('set_active')) {
      *
      *
      * @param $uri
-     * @param string $output
+     * @param  string  $output
      * @return string
      */
     function set_active($uri, $output = 'active')
