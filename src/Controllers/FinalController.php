@@ -17,9 +17,9 @@ class FinalController extends Controller
     /**
      * Update installed file and display finished view.
      *
-     * @param InstalledFileManager $fileManager
-     * @param FinalInstallManager $finalInstall
-     * @param EnvironmentManager $environment
+     * @param  InstalledFileManager  $fileManager
+     * @param  FinalInstallManager  $finalInstall
+     * @param  EnvironmentManager  $environment
      * @return View
      */
     public function finish(

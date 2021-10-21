@@ -24,7 +24,7 @@ class EnvironmentController extends Controller
     protected EnvironmentManager $EnvironmentManager;
 
     /**
-     * @param EnvironmentManager $environmentManager
+     * @param  EnvironmentManager  $environmentManager
      */
     public function __construct(EnvironmentManager $environmentManager)
     {
@@ -68,8 +68,8 @@ class EnvironmentController extends Controller
     /**
      * Processes the newly saved environment configuration (Classic).
      *
-     * @param Request $input
-     * @param Redirector $redirect
+     * @param  Request  $input
+     * @param  Redirector  $redirect
      * @return RedirectResponse
      */
     public function saveClassic(Request $input, Redirector $redirect): RedirectResponse
@@ -85,8 +85,8 @@ class EnvironmentController extends Controller
     /**
      * Processes the newly saved environment configuration (Form Wizard).
      *
-     * @param Request $request
-     * @param Redirector $redirect
+     * @param  Request  $request
+     * @param  Redirector  $redirect
      * @return RedirectResponse
      */
     public function saveWizard(Request $request, Redirector $redirect): RedirectResponse
@@ -121,7 +121,7 @@ class EnvironmentController extends Controller
      * https://github.com/RachidLaasri/LaravelInstaller/pull/162
      * Validate database connection with user credentials (Form Wizard).
      *
-     * @param Request $request
+     * @param  Request  $request
      * @return bool
      */
     private function checkDatabaseConnection(Request $request)
